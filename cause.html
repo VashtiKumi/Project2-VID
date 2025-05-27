@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Causes</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="cause.css">
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="top-nav">
+         <div class="btec-logo">
+           DI BTEC Project
+        </div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search climate topics...">
+            <button onclick="performSearch()">Search</button>
+        </div>
+    </div>
+    <header>
+        <div class="logo">
+       <a href="index.html">Eco  <img src="/environmental-awareness.png" alt=""><span>Aware</span></a>
+        </div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+        <nav>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="cause.html" class="active">Causes</a></li>
+                <li><a href="effect.html">Effects</a></li>
+                <li><a href="solution.html">Solutions</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="resource.html">Resources</a></li>
+                <li><a href="data.html">climate Data</a></li>
+                <li><a href="take-action.html" class="take-action">Take Action</a></li>
+            </ul>
+        </nav>
+    </header>
+     <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                     <h1>Causes of Climate Change</h1>
+            <p>Understanding the human activities and natural factors that contribute to our changing climate</p>
+                    <div class="hero-buttons">
+                        <a href="causes" class="btn btn-primary">Learn More</a>
+                        <a href="data.html" class="btn btn-secondary">View Climate Data</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="img.climage/images (2).jpeg" alt="">
+                </div>
+            </div>
+            <div class="wave-divider">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+
+    <main>
+        <section class="">
+<div class="great">
+    <img src="img.climage/images (14).jpeg" alt="">
+</div>
+        </section>
+
+        <section class="causes-grid">
+            <div class="cause-card">
+                <div class="cause-icon">🏭</div>
+                <h3>Greenhouse Gas Emissions</h3>
+                <div class="cause-content">
+                    <p>Carbon dioxide, methane, and other greenhouse gases trap heat in Earth's atmosphere, causing global warming.</p>
+                    <div class="fact-box">
+                        <h4>Key Fact</h4>
+                        <p>CO₂ levels are 50% higher than pre-industrial levels and continue to rise.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cause-card">
+                <div class="cause-icon">🚗</div>
+                <h3>Transportation</h3>
+                <div class="cause-content">
+                    <p>Cars, trucks, ships, and planes burn fossil fuels, releasing significant amounts of greenhouse gases.</p>
+                    <div class="fact-box">
+                        <h4>Key Fact</h4>
+                        <p>Transportation accounts for approximately 14% of global greenhouse gas emissions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cause-card">
+                <div class="cause-icon">⚡</div>
+                <h3>Electricity Production</h3>
+                <div class="cause-content">
+                    <p>Burning fossil fuels like coal, oil, and natural gas to generate electricity releases carbon dioxide.</p>
+                    <div class="fact-box">
+                        <h4>Key Fact</h4>
+                        <p>Electricity production generates about 25% of global greenhouse gas emissions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cause-card">
+                <div class="cause-icon">🌲</div>
+                <h3>Deforestation</h3>
+                <div class="cause-content">
+                    <p>Cutting down forests reduces the planet's ability to absorb CO₂ and releases stored carbon.</p>
+                    <div class="fact-box">
+                        <h4>Key Fact</h4>
+                        <p>About 12 million hectares of forest are lost each year, equivalent to 30 football fields per minute.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cause-card">
+                <div class="cause-icon">🐄</div>
+                <h3>Agriculture</h3>
+                <div class="cause-content">
+                    <p>Livestock produce methane, and fertilizers release nitrous oxide—both powerful greenhouse gases.</p>
+                    <div class="fact-box">
+                        <h4>Key Fact</h4>
+                        <p>Agriculture contributes approximately 24% of global greenhouse gas emissions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cause-card">
+                <div class="cause-icon">🏢</div>
+                <h3>Buildings & Industry</h3>
+                <div class="cause-content">
+                    <p>Energy used for heating, cooling, and manufacturing processes contributes to emissions.</p>
+                    <div class="fact-box">
+                        <h4>Key Fact</h4>
+                        <p>Buildings account for about 6% of global greenhouse gas emissions.</p>
+                    </div>
+                </div>
+            </div>
+                <div class="cause-card">
+  <img src="img.climage/images (18).jpeg" alt="" class="cause-image">
+  <h3>Fossil Fuel Extraction</h3>
+  <div class="cause-content">
+    <p>Extracting oil, coal, and natural gas for energy production releases methane and causes land degradation.</p>
+    <div class="fact-box">
+      <h4>Key Fact</h4>
+      <p>Fossil fuel extraction sites are among the top sources of methane emissions worldwide.</p>
+    </div>
+  </div>
+</div>
+
+<div class="cause-card">
+  <img src="img.climage/images (19).jpeg" alt="" class="cause-image">
+  <h3>Waste Decomposition</h3>
+  <div class="cause-content">
+    <p>Organic waste in landfills decomposes anaerobically, emitting large quantities of methane gas.</p>
+    <div class="fact-box">
+      <h4>Key Fact</h4>
+      <p>Waste contributes over 3% of all greenhouse gas emissions globally.</p>
+    </div>
+  </div>
+</div>
+
+<div class="cause-card">
+  <img src="img.climage/download (6).jpeg" alt="" class="cause-image">
+  <h3>Air Travel</h3>
+  <div class="cause-content">
+    <p>Airplanes emit CO₂ and other pollutants directly into the upper atmosphere, amplifying their warming effect.</p>
+    <div class="fact-box">
+      <h4>Key Fact</h4>
+      <p>Air travel accounts for 2.5% of global CO₂ emissions—and rising.</p>
+    </div>
+  </div>
+</div>
+
+<div class="cause-card">
+  <img src="img.climage/download (7).jpeg" alt="" class="cause-image">
+  <h3>Cement Production</h3>
+  <div class="cause-content">
+    <p>Cement manufacturing releases CO₂ through chemical reactions and fuel combustion.</p>
+    <div class="fact-box">
+      <h4>Key Fact</h4>
+      <p>Cement is responsible for about 8% of global carbon dioxide emissions.</p>
+    </div>
+  </div>
+</div>
+
+<div class="cause-card">
+  <img src="img.climage/images (21).jpeg" alt="" class="cause-image">
+  <h3>Fast Fashion</h3>
+  <div class="cause-content">
+    <p>The fashion industry emits greenhouse gases through textile production, dyeing, and global transportation.</p>
+    <button class="but"><a href="https://www.youtube.com/watch?v=amE8vVOiPaU"> Watch a Video to understand</a></button>
+    <div class="fact-box">
+      <h4>Key Fact</h4>
+      <p>Fast fashion produces 10% of all global carbon emissions—more than international flights and shipping combined.</p>
+    </div>
+  </div>
+</div>
+
+            </div>
+        </section>
+
+        <section class="data-visualization">
+            <h2>Global Greenhouse Gas Emissions by Sector</h2>
+            <div class="pie-chart-container">
+                <div class="pie-chart">
+                    <div class="slice slice1" title="Electricity & Heat (25%)"></div>
+                    <div class="slice slice2" title="Agriculture & Land Use (24%)"></div>
+                    <div class="slice slice3" title="Industry (21%)"></div>
+                    <div class="slice slice4" title="Transportation (14%)"></div>
+                    <div class="slice slice5" title="Buildings (6%)"></div>
+                    <div class="slice slice6" title="Other (10%)"></div>
+                </div>
+                <div class="pie-legend">
+                    <div class="legend-item"><span class="color-box color1"></span>Electricity & Heat (25%)</div>
+                    <div class="legend-item"><span class="color-box color2"></span>Agriculture & Land Use (24%)</div>
+                    <div class="legend-item"><span class="color-box color3"></span>Industry (21%)</div>
+                    <div class="legend-item"><span class="color-box color4"></span>Transportation (14%)</div>
+                    <div class="legend-item"><span class="color-box color5"></span>Buildings (6%)</div>
+                    <div class="legend-item"><span class="color-box color6"></span>Other (10%)</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="interactive-timeline">
+            <h2>Timeline: The Rise of Greenhouse Gases</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>1750</h3>
+                        <p>Pre-industrial CO₂ levels: 280 ppm</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>1900</h3>
+                        <p>Industrial Revolution accelerates: 295 ppm</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>1950</h3>
+                        <p>Post-war boom: 310 ppm</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>1980</h3>
+                        <p>First major climate concerns: 340 ppm</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2000</h3>
+                        <p>Rapid growth: 370 ppm</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2023</h3>
+                        <p>Current levels: 420+ ppm</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="next-steps">
+            <h2>What's Next?</h2>
+            <p>Now that you understand the causes of climate change, explore its effects on our planet.</p>
+            <a href="effect.html" class="btn">Explore Effects</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contain">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Eco <img src="/environmental-awareness.png" alt=""><span>Aware</span></h2>
+                    <p>Empowering youth to take climate action</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Learn</h3>
+                        <ul>
+                            <li><a href="cause.html">Causes</a></li>
+                            <li><a href="effect.html">Effects</a></li>
+                            <li><a href="solution.html">Solutions</a></li>
+                            <li><a href="quiz.html">Quiz</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="resource.html">Downloads</a></li>
+                            <li><a href="resource.html">Videos</a></li>
+                            <li><a href="resource.html">External Links</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Take Action</h3>
+                        <ul>
+                            <li><a href="take-action">Make a Pledge</a></li>
+                            <li><a href="take-action">Newsletter</a></li>
+                            <li><a href="take-action">Events</a></li>
+                            <li><a href="take-action">Share</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Connect</h3>
+                        <ul class="social-links">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                            <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+                <p>&copy; 2025 EcoAware.</p>
+            </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.getElementById('nav-toggle');
+            const nav = document.querySelector('nav');
+            const navLinks = document.querySelectorAll('nav a');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navToggle.checked = false;
+                });
+            });
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+             });
+        function performSearch() {
+        const query = document.getElementById('searchInput').value.toLowerCase();
+        if (!query) return;
+
+        const pages = [
+            { keyword: 'cause', url: 'cause.html' },
+            { keyword: 'effect', url: 'effect.html' },
+            { keyword: 'solution', url: 'solution.html' },
+            { keyword: 'quiz', url: 'quiz.html' },
+            { keyword: 'resource', url: 'resource.html' },
+            { keyword: 'data', url: 'data.html' },
+            { keyword: 'action', url: 'take-action.html' }
+        ];
+
+        const match = pages.find(page => query.includes(page.keyword));
+        if (match) {
+            window.location.href = match.url;
+        } else {
+            alert('No matching climate content found. Try keywords like "cause", "solution", "data".');
+        }
+      }
+          const socialLinks = document.querySelectorAll('.social-links a');
+    const socialURLs = [
+      'https://www.facebook.com/climategroup/',
+      'https://twitter.com/UNFCCC',
+      'https://www.instagram.com/unclimatechange/',
+      'https://www.youtube.com/user/climatechange']
+    socialLinks.forEach((link, i) => {
+      if (socialURLs[i]) {
+        link.href = socialURLs[i];
+        link.target = '_blank';
+      }
+    });
+    </script>
+    <script>
+  AOS.init();
+</script>
+</body>
+</html>

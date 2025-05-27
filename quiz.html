@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Quiz</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="quiz.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="top-nav">
+         <div class="btec-logo">
+         DI BTEC Project
+        </div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search climate topics...">
+            <button onclick="performSearch()">Search</button>
+        </div>
+  </div>
+    <header>
+       <div class="logo">
+         <a href="index.html">   Eco  <img src="/environmental-awareness.png" alt=""><span>Aware</span></a>
+        </div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+        <nav>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="cause.html">Causes</a></li>
+                <li><a href="effect.html">Effects</a></li>
+                <li><a href="solution.html">Solutions</a></li>
+                <li><a href="quiz.html" class="active">Quiz</a></li>
+                <li><a href="resource.html">Resources</a></li>
+                 <li><a href="data.html">Climate Data</a></li>
+                  <li><a href="take-action.html" class="take-action">Take Action</a></li>
+
+            </ul>
+        </nav>
+    </header>
+     <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Our Planet Needs <span class="highlight">Climate Action</span></h1>
+                    <p>Understanding climate change is the first step toward creating a sustainable future.</p>
+                    <div class="hero-buttons">
+                        <a href="causes" class="btn btn-primary">Learn More</a>
+                        <a href="data.html" class="btn btn-secondary">View Climate Data</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="img.climage/istockphoto-1998158865-612x612.jpg" alt="">
+                </div>
+            </div>
+            <div class="wave-divider">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+        
+
+    <main>
+        <section class="quiz-container">
+            <div class="quiz-intro">
+                <h3>How much do you know about climate change?</h3>
+                <p>Answer the following 10 questions to test your knowledge. Select the correct answer for each question and see your results at the end!</p>
+                <div class="quiz-start-btn">
+                    <label for="quiz-start" class="btn">Start Quiz</label>
+                </div>
+            </div>
+            
+            <input type="checkbox" id="quiz-start" class="quiz-start-toggle">
+            
+            <div class="quiz-questions">
+                <div class="quiz-question" id="question1">
+                    <div class="question-number">Question 1 of 10</div>
+                    <h3>Which of the following is the main greenhouse gas contributing to climate change?</h3>
+                    
+                    <div class="quiz-options">
+                        <div class="option">
+                            <input type="radio" name="q1" id="q1a" class="option-input">
+                            <label for="q1a" class="option-label">
+                                <span class="option-text">Oxygen</span>
+                                <span class="option-feedback incorrect">Incorrect. Oxygen is not a greenhouse gas.</span>
+                            </label>
+                        </div>
+                        
+                        <div class="option">
+                            <input type="radio" name="q1" id="q1b" class="option-input">
+                            <label for="q1b" class="option-label">
+                                <span class="option-text">Nitrogen</span>
+                                <span class="option-feedback incorrect">Incorrect. Nitrogen is not a greenhouse gas.</span>
+                            </label>
+                        </div>
+                        
+                        <div class="option">
+                            <input type="radio" name="q1" id="q1c" class="option-input correct-answer">
+                            <label for="q1c" class="option-label">
+                                <span class="option-text">Carbon Dioxide</span>
+                                <span class="option-feedback correct">Correct! Carbon dioxide (CO₂) is the primary greenhouse gas contributing to climate change.</span>
+                            </label>
+                        </div>
+                        
+                        <div class="option">
+                            <input type="radio" name="q1" id="q1d" class="option-input">
+                            <label for="q1d" class="option-label">
+                                <span class="option-text">Hydrogen</span>
+                                <span class="option-feedback incorrect">Incorrect. Hydrogen is not a greenhouse gas.</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-navigation">
+                        <div class="spacer"></div>
+                        <label for="q1-next" class="btn next-btn">Next Question</label>
+                    </div>
+                </div>
+                
+                <input type="checkbox" id="q1-next" class="question-toggle">
+                
+                <div class="quiz-question" id="question2">
+                    <div class="question-number">Question 2 of 10</div>
+                    <h3>What is the primary cause of the increased carbon dioxide in our atmosphere?</h3>
+                    
+                    <div class="quiz-options">
+                        <div class="option">
+                            <input type="radio" name="q2" id="q2a" class="option-input">
+                            <label for="q2a" class="option-label">
+                                <span class="option-text">Volcanic eruptions</span>
+                                <span class="option-feedback incorrect">Incorrect. While volcanoes do emit CO₂, they contribute much less than human activities.</span>
+                            </label>
+                        </div>
+                        
+                        <div class="option">
+                            <input type="radio" name="q2" id="q2b" class="option-input correct-answer">
+                            <label for="q2b" class="option-label">
+                                <span class="option-text">Burning fossil fuels</span>
+                                <span class="option-feedback correct">Correct! Burning fossil fuels like coal, oil, and natural gas is the primary source of human-caused CO₂ emissions.</span>
+                            </label>
+                        </div>
+                        
+                        <div class="option">
+                            <input type="radio" name="q2" id="q2c" class="option-input">
+                            <label for="q2c" class="option-label">
+                                <span class="option-text">Plant respiration</span>
+                                <span class="option-feedback incorrect">Incorrect. Plants absorb more CO₂ through photosynthesis than they release through respiration.</span>
+                            </label>
+                        </div>
+                        
+                        <div class="option">
+                            <input type="radio" name="q2" id="q2d" class="option-input">
+                            <label for="q2d" class="option-label">
+                                <span class="option-text">Ocean evaporation</span>
+                                <span class="option-feedback incorrect">Incorrect. Ocean evaporation primarily releases water vapor, not carbon dioxide.</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-navigation">
+                        <label for="q1-next" class="btn prev-btn">Previous Question</label>
+                        <label for="q2-next" class="btn next-btn">Next Question</label>
+                    </div>
+                </div>
+                
+                <input type="checkbox" id="q2-next" class="question-toggle">
+                
+                <div class="quiz-question" id="question3">
+                    <div class="question-number">Question 3 of 10</div>
+                    <h3>Which of the following is NOT an effect of climate change?</h3>
+                    
+                    <div class="quiz-options">
+                        <div class="option">
+                            <input type="radio" name="q3" id="q3a" class="option-input">
+                            <label for="q3a" class="option-label">
+                                <span class="option-text">Rising sea levels</span>
+                                <span class="option-feedback incorrect">Incorrect. Rising sea levels are a major effect of climate change due to melting ice and thermal expansion of seawater.</span>
+                            </label>
+                        </div>
+                        
+                        <div class="option">
+                            <input type="radio" name="q3" id="q3b" class="option-input">
+                            <label for="q3b" class="option-label">
+                                <span class="option-text">More frequent extreme weather events</span>
+                                <span class="option-feedback incorrect">Incorrect. Climate change is increasing the frequency and intensity of extreme weather events like hurricanes, floods, and droughts.</span>
+                            </label>
+                        </div>
+                        
+                        <div class="option">
+                            <input type="radio" name="q3" id="q3c" class="option-input correct-answer">
+                            <label for="q3c" class="option-label">
+                                <span class="option-text">Reduction in earthquakes</span>
+                                <span class="option-feedback correct">Correct! Climate change does not affect the frequency or intensity of earthquakes, which are caused by tectonic plate movements.</span>
+                            </label>
+                        </div>
+                        
+                        <div class="option">
+                            <input type="radio" name="q3" id="q3d" class="option-input">
+                            <label for="q3d" class="option-label">
+                                <span class="option-text">Changes in plant and animal ranges</span>
+                                <span class="option-feedback incorrect">Incorrect. Many species are shifting their ranges toward the poles or to higher elevations as temperatures rise.</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-navigation">
+                        <label for="q2-next" class="btn prev-btn">Previous Question</label>
+                        <label for="q3-next" class="btn next-btn">Next Question</label>
+                    </div>
+                  class="btn next-btn">Next Question</label>
+                    </div>
+                </div>
+                
+                <input type="checkbox" id="q3-next" class="question-toggle">
+                
+                <div class="quiz-question" id="question4">
+                    <div class="question-number">Question 4 of 10</div>
+                    <h3>Which of these renewable energy sources currently provides the most electricity worldwide?</h3>
+                    
+                    <div class="quiz-options">
+                        <div class="option">
+                            <input type="radio" name="q4" id="q4a" class="option-input correct-answer">
+                            <label for="q4a" class="option-label">
+                                <span class="option-text">Hydropower</span>
+                                <span class="option-feedback correct">Correct! Hydropower is currently the largest renewable electricity source globally, though solar and wind are growing rapidly.</span>
+                            </label>
+                        </div>
+                        
+                        <div class="option">
+                            <input type="radio" name="q4" id="q4b" class="option-input">
+                            <label for="q4b" class="option-label">
+                                <span class="option-text">Solar power</span>
+                                <span class="option-feedback incorrect">Incorrect. While solar power is growing rapidly, it still provides less electricity globally than hydropower.</span>
+                            </label>
+                        </div>
+                        
+                        <div class="option">
+                            <input type="radio" name="q4" id="q4c" class="option-input">
+                            <label for="q4c" class="option-label">
+                                <span class="option-text">Wind power</span>
+                                <span class="option-feedback incorrect">Incorrect. Wind power is growing quickly but still provides less electricity globally than hydropower.</span>
+                            </label>
+                        </div>
+                        
+                        <div class="option">
+                            <input type="radio" name="q4" id="q4d" class="option-input">
+                            <label for="q4d" class="option-label">
+                                <span class="option-text">Geothermal power</span>
+                                <span class="option-feedback incorrect">Incorrect. Geothermal power provides a relatively small portion of global renewable electricity.</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-navigation">
+                        <label for="q3-next" class="btn prev-btn">Previous Question</label>
+                        <label for="q4-next" class="btn next-btn">Next Question</label>
+                    </div>
+                </div>
+                
+                <input type="checkbox" id="q4-next" class="question-toggle">
+                
+                <div class="quiz-question" id="question5">
+                    <div class="question-number">Question 5 of 10</div>
+                    <h3>What is a carbon footprint?</h3>
+                    
+                    <div class="quiz-options">
+                        <div class="option">
+                            <input type="radio" name="q5" id="q5a" class="option-input">
+                            <label for="q5a" class="option-label">
+                                <span class="option-text">The mark left by carbon paper</span>
+                                <span class="option-feedback incorrect">Incorrect. A carbon footprint is not related to carbon paper.</span>
+                            </label>
+                        </div>
+                        
+                        <div class="option">
+                            <input type="radio" name="q5" id="q5b" class="option-input correct-answer">
+                            <label for="q5b" class="option-label">
+                                <span class="option-text">The total greenhouse gas emissions caused by an individual, event, organization, or product</span>
+                                <span class="option-feedback correct">Correct! A carbon footprint measures the total greenhouse gas emissions caused directly and indirectly by a person, organization, event, or product.</span>
+                            </label>
+                        </div>
+                        
+                        <div class="option">
+                            <input type="radio" name="q5" id="q5c" class="option-input">
+                            <label for="q5c" class="option-label">
+                                <span class="option-text">The area of land covered by carbon-rich soil</span>
+                                <span class="option-feedback incorrect">Incorrect. A carbon footprint is not a measurement of land area.</span>
+                            </label>
+                        </div>
+                        
+                        <div class="option">
+                            <input type="radio" name="q5" id="q5d" class="option-input">
+                            <label for="q5d" class="option-label">
+                                <span class="option-text">The amount of carbon in the atmosphere</span>
+                                <span class="option-feedback incorrect">Incorrect. While related, a carbon footprint specifically measures emissions attributable to a specific source.</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question-navigation">
+                        <label for="q4-next" class="btn prev-btn">Previous Question</label>
+                        <label for="q5-next" class="btn next-btn">Next Question</label>
+                    </div>
+                </div>
+                
+                <input type="checkbox" id="q5-next" class="question-toggle">
+    
+<input type="checkbox" id="q6-next" class="question-toggle">
+<div class="quiz-question" id="question6">
+  <div class="question-number">Question 6 of 10</div>
+  <h3>Which country was the first to declare a climate emergency?</h3>
+  <div class="quiz-options">
+    <div class="option">
+      <input type="radio" name="q6" id="q6a" class="option-input">
+      <label for="q6a" class="option-label">
+        <span class="option-text">United States</span>
+        <span class="option-feedback incorrect">Incorrect. The U.S. followed other nations.</span>
+      </label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q6" id="q6b" class="option-input correct-answer">
+      <label for="q6b" class="option-label">
+        <span class="option-text">United Kingdom</span>
+        <span class="option-feedback correct">Correct! The UK declared a climate emergency in 2019.</span>
+      </label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q6" id="q6c" class="option-input">
+      <label for="q6c" class="option-label">
+        <span class="option-text">Australia</span>
+        <span class="option-feedback incorrect">Incorrect. Australia has debated it but not led the declaration.</span>
+      </label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q6" id="q6d" class="option-input">
+      <label for="q6d" class="option-label">
+        <span class="option-text">Canada</span>
+        <span class="option-feedback incorrect">Incorrect. Canada declared a climate emergency later in 2019.</span>
+      </label>
+    </div>
+  </div>
+  <div class="question-navigation">
+    <label for="q5-next" class="btn prev-btn">Previous Question</label>
+    <label for="q6-next" class="btn next-btn">Next Question</label>
+  </div>
+</div>
+
+<input type="checkbox" id="q7-next" class="question-toggle">
+<div class="quiz-question" id="question7">
+  <div class="question-number">Question 7 of 10</div>
+  <h3>Which sector contributes the most to global greenhouse gas emissions?</h3>
+  <div class="quiz-options">
+    <div class="option">
+      <input type="radio" name="q7" id="q7a" class="option-input">
+      <label for="q7a" class="option-label">
+        <span class="option-text">Transportation</span>
+        <span class="option-feedback incorrect">Incorrect. It's significant but not the largest.</span>
+      </label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q7" id="q7b" class="option-input correct-answer">
+      <label for="q7b" class="option-label">
+        <span class="option-text">Energy production</span>
+        <span class="option-feedback correct">Correct! Electricity and heat production account for over 25% of global emissions.</span>
+      </label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q7" id="q7c" class="option-input">
+      <label for="q7c" class="option-label">
+        <span class="option-text">Waste management</span>
+        <span class="option-feedback incorrect">Incorrect. Waste contributes less comparatively.</span>
+      </label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q7" id="q7d" class="option-input">
+      <label for="q7d" class="option-label">
+        <span class="option-text">Agriculture</span>
+        <span class="option-feedback incorrect">Incorrect. Agriculture is a key contributor but not the top one globally.</span>
+      </label>
+    </div>
+  </div>
+  <div class="question-navigation">
+    <label for="q6-next" class="btn prev-btn">Previous Question</label>
+    <label for="q7-next" class="btn next-btn">Next Question</label>
+  </div>
+</div>
+
+<input type="checkbox" id="q8-next" class="question-toggle">
+<div class="quiz-question" id="question8">
+  <div class="question-number">Question 8 of 10</div>
+  <h3>Which gas traps the most heat in the atmosphere over a 100-year period?</h3>
+  <div class="quiz-options">
+    <div class="option">
+      <input type="radio" name="q8" id="q8a" class="option-input correct-answer">
+      <label for="q8a" class="option-label">
+        <span class="option-text">Methane (CH₄)</span>
+        <span class="option-feedback correct">Correct! Methane traps over 25 times more heat than CO₂ over 100 years.</span>
+      </label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q8" id="q8b" class="option-input">
+      <label for="q8b" class="option-label">
+        <span class="option-text">Carbon Dioxide (CO₂)</span>
+        <span class="option-feedback incorrect">Incorrect. CO₂ is abundant but less potent per molecule.</span>
+      </label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q8" id="q8c" class="option-input">
+      <label for="q8c" class="option-label">
+        <span class="option-text">Ozone (O₃)</span>
+        <span class="option-feedback incorrect">Incorrect. Ozone is a greenhouse gas, but methane is more potent long-term.</span>
+      </label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q8" id="q8d" class="option-input">
+      <label for="q8d" class="option-label">
+        <span class="option-text">Nitrous Oxide (N₂O)</span>
+        <span class="option-feedback incorrect">Incorrect. It's powerful too, but methane is more impactful in 100-year terms.</span>
+      </label>
+    </div>
+  </div>
+  <div class="question-navigation">
+    <label for="q7-next" class="btn prev-btn">Previous Question</label>
+    <label for="q8-next" class="btn next-btn">Next Question</label>
+  </div>
+</div>
+
+<input type="checkbox" id="q9-next" class="question-toggle">
+<div class="quiz-question" id="question9">
+  <div class="question-number">Question 9 of 10</div>
+  <h3>Which of the following innovations helps remove carbon dioxide from the atmosphere?</h3>
+  <div class="quiz-options">
+    <div class="option">
+      <input type="radio" name="q9" id="q9a" class="option-input">
+      <label for="q9a" class="option-label">
+        <span class="option-text">Oil refining</span>
+        <span class="option-feedback incorrect">Incorrect. Oil refining releases more CO₂.</span>
+      </label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q9" id="q9b" class="option-input">
+      <label for="q9b" class="option-label">
+        <span class="option-text">Natural gas flaring</span>
+        <span class="option-feedback incorrect">Incorrect. Flaring contributes CO₂, not removes it.</span>
+      </label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q9" id="q9c" class="option-input">
+      <label for="q9c" class="option-label">
+        <span class="option-text">Plastic incineration</span>
+        <span class="option-feedback incorrect">Incorrect. Incineration releases pollutants.</span>
+      </label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q9" id="q9d" class="option-input correct-answer">
+      <label for="q9d" class="option-label">
+        <span class="option-text">Direct Air Capture (DAC)</span>
+        <span class="option-feedback correct">Correct! DAC uses machines to remove CO₂ directly from the air.</span>
+      </label>
+    </div>
+  </div>
+  <div class="question-navigation">
+    <label for="q8-next" class="btn prev-btn">Previous Question</label>
+    <label for="q9-next" class="btn next-btn">Next Question</label>
+  </div>
+</div>
+
+<input type="checkbox" id="q10-next" class="question-toggle">
+<div class="quiz-question" id="question10">
+  <div class="question-number">Question 10 of 10</div>
+  <h3>Which international agreement aims to limit global warming below 2°C above pre-industrial levels?</h3>
+  <div class="quiz-options">
+    <div class="option">
+      <input type="radio" name="q10" id="q10a" class="option-input">
+      <label for="q10a" class="option-label">
+        <span class="option-text">Kyoto Protocol</span>
+        <span class="option-feedback incorrect">Incorrect. The Kyoto Protocol was a precursor with limited scope.</span>
+      </label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q10" id="q10b" class="option-input correct-answer">
+      <label for="q10b" class="option-label">
+        <span class="option-text">Paris Agreement</span>
+        <span class="option-feedback correct">Correct! The Paris Agreement, signed in 2015, aims to limit global warming well below 2°C.</span>
+      </label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q10" id="q10c" class="option-input">
+      <label for="q10c" class="option-label">
+        <span class="option-text">Montreal Protocol</span>
+        <span class="option-feedback incorrect">Incorrect. The Montreal Protocol addresses ozone depletion.</span>
+      </label>
+    </div>
+    <div class="option">
+      <input type="radio" name="q10" id="q10d" class="option-input">
+      <label for="q10d" class="option-label">
+        <span class="option-text">Geneva Accord</span>
+        <span class="option-feedback incorrect">Incorrect. The Geneva Accord is unrelated to climate goals.</span>
+      </label>
+    </div>
+  </div>
+  <div class="question-navigation">
+    <label for="q9-next" class="btn prev-btn">Previous Question</label>
+    <label for="q10-next" class="btn next-btn">See Results</label>
+  </div>
+</div>
+                
+                <div class="quiz-results">
+                    <h3>Your Results</h3>
+                    <p>Congratulations on completing the Climate Champions Quiz!</p>
+                    <p>This quiz was designed to test your knowledge about climate change causes, effects, and solutions. To see the correct answers, you can go back through the questions.</p>
+                    <p>Want to learn more? Check out our resources page for additional materials.</p>
+                    <div class="results-actions">
+                        <a href="resources.html" class="btn">Explore Resources</a>
+                        <label for="quiz-start" class="btn btn-secondary">Retake Quiz</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="next-steps">
+            <h2>Explore More Resources</h2>
+            <p>Check out our downloadable resources and educational materials to learn more about climate change.</p>
+            <a href="resource.html" class="btn">View Resources</a>
+        </section>
+    </main>
+
+     <footer>
+        <div class="contain">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Eco <img src="/environmental-awareness.png" alt=""><span>Aware</span></h2>
+                    <p>Empowering youth to take climate action</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Learn</h3>
+                        <ul>
+                            <li><a href="cause.html">Causes</a></li>
+                            <li><a href="effect.html">Effects</a></li>
+                            <li><a href="solution.html">Solutions</a></li>
+                            <li><a href="quiz.html">Quiz</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="resource.html">Downloads</a></li>
+                            <li><a href="resource.html">Videos</a></li>
+                            <li><a href="resource.html">External Links</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Take Action</h3>
+                        <ul>
+                            <li><a href="take-action">Make a Pledge</a></li>
+                            <li><a href="take-action">Newsletter</a></li>
+                            <li><a href="take-action">Events</a></li>
+                            <li><a href="take-action">Share</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Connect</h3>
+                        <ul class="social-links">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                            <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+                <p>&copy; 2025 EcoAware.</p>
+            </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.getElementById('nav-toggle');
+            const nav = document.querySelector('nav');
+            const navLinks = document.querySelectorAll('nav a');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navToggle.checked = false;
+                });
+            });
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+             });
+      function performSearch() {
+        const query = document.getElementById('searchInput').value.toLowerCase();
+        if (!query) return;
+
+        const pages = [
+            { keyword: 'cause', url: 'cause.html' },
+            { keyword: 'effect', url: 'effect.html' },
+            { keyword: 'solution', url: 'solution.html' },
+            { keyword: 'quiz', url: 'quiz.html' },
+            { keyword: 'resource', url: 'resource.html' },
+            { keyword: 'data', url: 'data.html' },
+            { keyword: 'action', url: 'take-action.html' }
+        ];
+
+        const match = pages.find(page => query.includes(page.keyword));
+        if (match) {
+            window.location.href = match.url;
+        } else {
+            alert('No matching climate content found. Try keywords like "cause", "solution", "data".');
+        }
+      }
+          const socialLinks = document.querySelectorAll('.social-links a');
+    const socialURLs = [
+      'https://www.facebook.com/climategroup/',
+      'https://twitter.com/UNFCCC',
+      'https://www.instagram.com/unclimatechange/',
+      'https://www.youtube.com/user/climatechange']
+    socialLinks.forEach((link, i) => {
+      if (socialURLs[i]) {
+        link.href = socialURLs[i];
+        link.target = '_blank';
+      }
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+    const questions = document.querySelectorAll(".quiz-question");
+    const resultsSection = document.querySelector(".quiz-results");
+    const resultMessage = document.createElement("p");
+    resultsSection.insertBefore(resultMessage, resultsSection.querySelector(".results-actions"));
+
+    document.getElementById("q10-next").addEventListener("change", function () {
+      let score = 0;
+      const total = 10;
+      const correctAnswers = document.querySelectorAll(".correct-answer");
+
+      correctAnswers.forEach(answer => {
+        if (answer.checked) {
+          score++;
+        }
+      });
+
+      const percent = (score / total) * 100;
+      resultMessage.textContent = `Your Score: ${score}/${total} (${percent.toFixed(0)}%)`;
+
+      setTimeout(() => {
+        if (score >= 7) {
+          alert("🎉 Hurry! You have passed successfully! Great job championing the climate cause!");
+        } else {
+          alert("🌱 You can do better! Keep learning and become a climate champion! 💪");
+        }
+      }, 500);
+    });
+  });
+    </script>
+    <script>
+  AOS.init();
+</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Aware</title>
+    <link rel="stylesheet" href="styl.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+     <div class="top-nav">
+         <div class="btec-logo">
+        DI BTEC Project
+        </div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search climate topics...">
+            <button onclick="performSearch()">Search</button>
+        </div>
+    </div>
+    <header>
+        <div class="logo">
+            Eco  <img src="/environmental-awareness.png" alt=""><span>Aware</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="cause.html">Cause</a></li>
+                <li><a href="effect.html">Effects</a></li>
+                <li><a href="solution.html">Solutions</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="resource.html">Resources</a></li>
+                <li><a href="data.html">Climate Data</a></li>
+                <li><a href="take-action.html" class="take-action">Take Action</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-left"
+         data-aos="fade-right"
+         data-aos-duration="3000"
+        >
+            <h1>Our Planet <span class="earth-emoji">🌍</span> Needs <br> Climate Action.</h1>
+            <p>Understanding climate change is the first step
+                <br> toward creating a sustainable future.</p>
+            <div class="hero-buttons">
+                <a href="main.html" class="learn-more">Learn More</a>
+                <a href="#" class="view-climate-data">View Climate Data</a>
+            </div>
+        </div>
+    </section>
+
+   <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.getElementById('nav-toggle');
+            const nav = document.querySelector('nav');
+            const navLinks = document.querySelectorAll('nav a');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navToggle.checked = false;
+                });
+            });
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+             });
+        
+   function performSearch() {
+        const query = document.getElementById('searchInput').value.toLowerCase();
+        if (!query) return;
+
+        const pages = [
+            { keyword: 'cause', url: 'cause.html' },
+            { keyword: 'effect', url: 'effect.html' },
+            { keyword: 'solution', url: 'solution.html' },
+            { keyword: 'quiz', url: 'quiz.html' },
+            { keyword: 'resource', url: 'resource.html' },
+            { keyword: 'data', url: 'data.html' },
+            { keyword: 'action', url: 'take-action.html' }
+        ];
+
+        const match = pages.find(page => query.includes(page.keyword));
+        if (match) {
+            window.location.href = match.url;
+        } else {
+            alert('No matching climate content found. Try keywords like "cause", "solution", "data".');
+        }
+      }
+</script>
+<script>
+  AOS.init();
+</script>
+</body>
+
+</html>

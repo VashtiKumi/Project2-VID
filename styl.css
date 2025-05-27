@@ -1,0 +1,345 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+ 
+}
+
+header {
+    background-color: #fff;
+  padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    font-weight: 700;
+    color: #000000;
+}
+
+.logo img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.logo span {
+    color: #035700;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 0.6cm;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #008a07;
+}
+
+nav a.take-action {
+    background-color: #1a5c00;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+nav a.take-action:hover {
+    background-color: #2d8d00;
+}
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: none;
+  cursor: pointer;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: #000000;
+  height: 2px;
+  width: 2rem;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+.hero {
+    background-image: url(/image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 50px;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden; 
+}
+
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 57%; 
+    height: 800px; 
+    background-color: white;
+    border-radius: 100% 100% 100% 100%;
+    transform: translateX(-25%); 
+    margin-top: -35px;
+    z-index: 0; 
+}
+
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55.5%; 
+    height: 800px;
+    background-color: green;
+    border-radius: 100% 100% 100% 100%; 
+    transform: translateX(-30%);
+   
+    margin-top: -35px;
+    z-index: 1;
+    }
+.hero-left {
+    max-width: 50%;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3.2em;
+    color: white;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero .earth-emoji {
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+
+.hero p {
+    font-size: 1.1em;
+    color: white;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.hero-buttons a {
+    display: inline-block;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-right: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.hero-buttons .learn-more {
+    background-color: #fff;
+    color: #0a7c00;
+    border: 2px solid #167000;
+}
+
+.hero-buttons .learn-more:hover {
+    background-color: #14af00;
+    color: #fff;
+}
+
+.hero-buttons .view-climate-data {
+    background-color: #ffffff;
+    color: #096800;
+}
+
+.hero-buttons .view-climate-data:hover {
+    background-color: #009600;
+    color: white;
+}
+
+.hero-right {
+    max-width: 45%;
+    z-index: 2;
+}
+
+.hero-right img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+ .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #096900;
+            padding: 10px 40px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+        }
+        .top-nav .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        .top-nav input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+            width: 350px;
+            height: 35px;
+        }
+        .top-nav button {
+            padding: 20px 15px;
+            background-color: #167000;
+            color: #fff;
+            border: none;
+            font-size: 20px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        .top-nav button:hover {
+            background-color: #0a5000;
+        }
+        .top-nav .btec-logo  {
+            font-size: 40px;
+            color: white;
+            font-weight: 900;
+           
+        }
+
+        @media (max-width: 768px) {
+            .top-nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .top-nav .search-bar {
+                margin-top: 10px;
+                width: 100%;
+            }
+            .top-nav input[type="text"] {
+                width: 100%;
+                border-radius: 4px;
+            }
+            .top-nav button {
+                margin-top: 5px;
+                border-radius: 4px;
+            }
+        }
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        height: auto;
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .hero::before,
+    .hero::after {
+        display: none;
+    }
+
+    .hero-left {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .hero-buttons a {
+        margin: 10px 10px;
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+    .nav-toggle-label {
+    display: block;
+  }
+   .nav-toggle:checked ~ nav {
+    transform: scale(1, 1);
+  }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-buttons a {
+        width: 80%;
+        text-align: center;
+    }
+
+    nav a.take-action {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+}                           

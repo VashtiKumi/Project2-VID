@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Effects</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="effect.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="top-nav">
+         <div class="btec-logo">
+        DI BTEC Project
+        </div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search climate topics...">
+            <button onclick="performSearch()">Search</button>
+        </div>
+    </div>
+    <header>
+       <div class="logo">
+        <a href="index.html">    Eco  <img src="/environmental-awareness.png" alt=""><span>Aware</span></a>
+        </div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+        <nav>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="cause.html">Causes</a></li>
+                <li><a href="effect.html" class="active">Effects</a></li>
+                <li><a href="solution.html">Solutions</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="resource.html">Resources</a></li>
+                <li><a href="data.html">Climate Data</a></li>
+                <li><a href="take-action.html" class="take-action">Take Action</a></li>
+            </ul>
+        </nav>
+    </header>
+     <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Effect of Climate Change</h1>
+                    <p>Exploring the impacts of climate change on our planet and communities</p>
+                    <div class="hero-buttons">
+                        <a href="causes" class="btn btn-primary">Learn More</a>
+                        <a href="data.html" class="btn btn-secondary">View Climate Data</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                  <img src="/img.climage/images (3).jpeg" alt="">
+                    <div class="earth-animation">
+                        <div class="earth">
+                            <div class="earth-surface"></div>
+                            <div class="glow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wave-divider">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+        
+
+    <main>
+
+        <section class="interactive-map">
+            <h2>Global Climate Impacts</h2>
+            <p>Hover over different regions to see climate change effects</p>
+            
+            <div class="map-container">
+                <div class="world-map">
+                    <div class="map-region arctic" data-region="Arctic">
+                        <div class="region-info">
+                            <h3>Arctic</h3>
+                            <p>Warming at twice the global rate. Sea ice is rapidly declining, affecting wildlife and indigenous communities.</p>
+                        </div>
+                    </div>
+                    <div class="map-region north-america" data-region="North America">
+                        <div class="region-info">
+                            <h3>North America</h3>
+                            <p>Increased wildfires, droughts in the west, flooding in the east, and more intense hurricanes.</p>
+                        </div>
+                    </div>
+                    <div class="map-region europe" data-region="Europe">
+                        <div class="region-info">
+                            <h3>Europe</h3>
+                            <p>More frequent heat waves, flooding, and droughts. Mediterranean regions facing water scarcity.</p>
+                        </div>
+                    </div>
+                    <div class="map-region asia" data-region="Asia">
+                        <div class="region-info">
+                            <h3>Asia</h3>
+                            <p>Increased flooding, heat waves, and water stress affecting billions. Sea level rise threatening coastal cities.</p>
+                        </div>
+                    </div>
+                    <div class="map-region africa" data-region="Africa">
+                        <div class="region-info">
+                            <h3>Africa</h3>
+                            <p>Severe droughts, food insecurity, and water scarcity. Many regions highly vulnerable with limited adaptation capacity.</p>
+                        </div>
+                    </div>
+                    <div class="map-region south-america" data-region="South America">
+                        <div class="region-info">
+                            <h3>South America</h3>
+                            <p>Amazon rainforest at risk, changing precipitation patterns, and glacier retreat in the Andes.</p>
+                        </div>
+                    </div>
+                    <div class="map-region australia" data-region="Australia & Oceania">
+                        <div class="region-info">
+                            <h3>Australia & Oceania</h3>
+                            <p>Increased bushfires, coral reef bleaching, and sea level rise threatening Pacific islands.</p>
+                        </div>
+                    </div>
+                    <div class="map-region antarctica" data-region="Antarctica">
+                        <div class="region-info">
+                            <h3>Antarctica</h3>
+                            <p>Ice sheet melting, contributing to sea level rise globally. Changes affecting marine ecosystems.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="effects-categories">
+            <h2>Major Climate Change Effects</h2>
+            
+            <div class="effect-tabs">
+                <input type="radio" id="tab1" name="effect-tab" checked>
+                <label for="tab1">Rising Temperatures</label>
+                <div class="tab-content">
+                    <div class="tab-image">
+                        <img src="img.climage/images (17).jpeg" alt="">
+                    </div>
+                    <div class="tab-text">
+                        <h3>Rising Global Temperatures</h3>
+                        <p>The Earth's average temperature has increased by about 1.1°C since pre-industrial times. This may seem small, but even small changes in global temperature can have significant impacts.</p>
+                        <ul>
+                            <li>More frequent and intense heat waves</li>
+                            <li>Longer and more severe droughts</li>
+                            <li>Changes in growing seasons affecting agriculture</li>
+                            <li>Expansion of disease-carrying insects into new regions</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <input type="radio" id="tab2" name="effect-tab">
+                <label for="tab2">Sea Level Rise</label>
+                <div class="tab-content">
+                    <div class="tab-image">
+                        <img src="img.climage/images (16).jpeg" alt="">
+                    </div>
+                    <div class="tab-text">
+                        <h3>Rising Sea Levels</h3>
+                        <p>Global sea levels have risen about 8-9 inches (21-24 cm) since 1880, with the rate accelerating in recent decades due to melting ice sheets and glaciers, plus thermal expansion of seawater as it warms.</p>
+                        <ul>
+                            <li>Coastal flooding and erosion</li>
+                            <li>Displacement of coastal communities</li>
+                            <li>Saltwater intrusion into freshwater supplies</li>
+                            <li>Loss of coastal wetlands and habitats</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <input type="radio" id="tab3" name="effect-tab">
+                <label for="tab3">Extreme Weather</label>
+                <div class="tab-content">
+                    <div class="tab-image">
+                        <img src="img.climage/istockphoto-1333043586-612x612.webp" alt="">
+                    </div>
+                    <div class="tab-text">
+                        <h3>Extreme Weather Events</h3>
+                        <p>Climate change is increasing the frequency and intensity of extreme weather events worldwide, causing significant damage and disruption to communities.</p>
+                        <ul>
+                            <li>More powerful hurricanes and typhoons</li>
+                            <li>Increased flooding from heavy rainfall</li>
+                            <li>More destructive wildfires</li>
+                            <li>Longer and more intense droughts</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <input type="radio" id="tab4" name="effect-tab">
+                <label for="tab4">Biodiversity Loss</label>
+                <div class="tab-content">
+                    <div class="tab-image">
+                        <img src="img.climage/istockphoto-499748636-612x612.jpg" alt="">
+                    </div>
+                    <div class="tab-text">
+                        <h3>Biodiversity Loss</h3>
+                        <p>Climate change is altering habitats faster than many species can adapt, leading to population declines and increased extinction risks.</p>
+                        <ul>
+                            <li>Coral reef bleaching and death</li>
+                            <li>Shifts in species ranges and migration patterns</li>
+                            <li>Disruption of food webs and ecosystems</li>
+                            <li>Loss of habitat for polar and alpine species</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <input type="radio" id="tab5" name="effect-tab">
+                <label for="tab5">Human Impacts</label>
+                <div class="tab-content">
+                    <div class="tab-image">
+                        <img src="img.climage/images (15).jpeg" alt="">
+                    </div>
+                    <div class="tab-text">
+                        <h3>Human Health & Society</h3>
+                        <p>Climate change affects human health, food security, water availability, and can contribute to migration and conflict.</p>
+                        <ul>
+                            <li>Increased heat-related illnesses and deaths</li>
+                            <li>Expanded range of vector-borne diseases</li>
+                            <li>Food and water insecurity</li>
+                            <li>Climate-related displacement and migration</li>
+                            <li>Disproportionate impacts on vulnerable communities</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="data-visualization">
+            <h2>Climate Tipping Points</h2>
+            <p>Critical thresholds that, when crossed, lead to large and often irreversible changes in the climate system</p>
+            
+            <div class="tipping-points-container">
+                <div class="tipping-point">
+                    <div class="tipping-point-icon">🧊</div>
+                    <div class="tipping-point-content">
+                        <h3>Arctic Sea Ice Loss</h3>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 70%;"></div>
+                            <span class="progress-text">70% toward tipping point</span>
+                        </div>
+                        <p>As ice melts, less sunlight is reflected, accelerating warming in a dangerous feedback loop.</p>
+                    </div>
+                </div>
+                
+                <div class="tipping-point">
+                    <div class="tipping-point-icon">🌲</div>
+                    <div class="tipping-point-content">
+                        <h3>Amazon Rainforest Dieback</h3>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 50%;"></div>
+                            <span class="progress-text">50% toward tipping point</span>
+                        </div>
+                        <p>Deforestation and warming could transform parts of the rainforest into savanna.</p>
+                    </div>
+                </div>
+                
+                <div class="tipping-point">
+                    <div class="tipping-point-icon">🏔️</div>
+                    <div class="tipping-point-content">
+                        <h3>Greenland Ice Sheet Melt</h3>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 45%;"></div>
+                            <span class="progress-text">45% toward tipping point</span>
+                        </div>
+                        <p>Complete melting would raise global sea levels by about 7 meters (23 feet).</p>
+                    </div>
+                </div>
+                
+                <div class="tipping-point">
+                    <div class="tipping-point-icon">🌊</div>
+                    <div class="tipping-point-content">
+                        <h3>Atlantic Circulation Slowdown</h3>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 35%;"></div>
+                            <span class="progress-text">35% toward tipping point</span>
+                        </div>
+                        <p>Changes to ocean currents could dramatically alter climate patterns across Europe and North America.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="next-steps">
+            <h2>What Can We Do?</h2>
+            <p>Now that you understand the effects of climate change, discover solutions and actions we can take.</p>
+            <a href="solution.html" class="btn">Explore Solutions</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contain">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Eco <img src="/environmental-awareness.png" alt=""><span>Aware</span></h2>
+                    <p>Empowering youth to take climate action</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Learn</h3>
+                        <ul>
+                            <li><a href="cause.html">Causes</a></li>
+                            <li><a href="effect.html">Effects</a></li>
+                            <li><a href="solution.html">Solutions</a></li>
+                            <li><a href="quiz.html">Quiz</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="resource.html">Downloads</a></li>
+                            <li><a href="resource.html">Videos</a></li>
+                            <li><a href="resource.html">External Links</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Take Action</h3>
+                        <ul>
+                            <li><a href="take-action">Make a Pledge</a></li>
+                            <li><a href="take-action">Newsletter</a></li>
+                            <li><a href="take-action">Events</a></li>
+                            <li><a href="take-action">Share</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Connect</h3>
+                        <ul class="social-links">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                            <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+                <p>&copy; 2025 EcoAware.</p>
+            </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.getElementById('nav-toggle');
+            const nav = document.querySelector('nav');
+            const navLinks = document.querySelectorAll('nav a');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navToggle.checked = false;
+                });
+            });
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+             });
+        function performSearch() {
+        const query = document.getElementById('searchInput').value.toLowerCase();
+        if (!query) return;
+
+        const pages = [
+            { keyword: 'cause', url: 'cause.html' },
+            { keyword: 'effect', url: 'effect.html' },
+            { keyword: 'solution', url: 'solution.html' },
+            { keyword: 'quiz', url: 'quiz.html' },
+            { keyword: 'resource', url: 'resource.html' },
+            { keyword: 'data', url: 'data.html' },
+            { keyword: 'action', url: 'take-action.html' }
+        ];
+
+        const match = pages.find(page => query.includes(page.keyword));
+        if (match) {
+            window.location.href = match.url;
+        } else {
+            alert('No matching climate content found. Try keywords like "cause", "solution", "data".');
+        }
+      }
+          const socialLinks = document.querySelectorAll('.social-links a');
+    const socialURLs = [
+      'https://www.facebook.com/climategroup/',
+      'https://twitter.com/UNFCCC',
+      'https://www.instagram.com/unclimatechange/',
+      'https://www.youtube.com/user/climatechange']
+    socialLinks.forEach((link, i) => {
+      if (socialURLs[i]) {
+        link.href = socialURLs[i];
+        link.target = '_blank';
+      }
+    });
+    </script>
+    <script>
+  AOS.init();
+</script>
+</body>
+</html>

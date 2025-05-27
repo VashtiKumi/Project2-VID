@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Data</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="data.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="top-nav">
+         <div class="btec-logo">
+         DI BTEC Project
+        </div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search climate topics...">
+            <button onclick="performSearch()">Search</button>
+        </div>
+    </div>
+    <header>
+        <div class="logo">
+       <a href="index.html">      Eco  <img src="/environmental-awareness.png" alt=""><span>Aware</span></a>
+        </div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+        <nav>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="cause.html">Causes</a></li>
+                <li><a href="effect.html">Effects</a></li>
+                <li><a href="solution.html">Solutions</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="resource.html">Resources</a></li>
+                <li><a href="data.html" class="active">Climate Data</a></li>
+                <li><a href="take-action.html" class="take-action">Take Action</a></li>
+            </ul>
+        </nav>
+    </header>
+ <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Climate Data Visualizations</h1>
+                    <p>Explore real climate data and understand the trends shaping our planet's future</p>
+                    <div class="hero-buttons">
+                        <a href="causes" class="btn btn-primary">Learn More</a>
+                </div>
+                </div>
+                <div class="hero-image">
+                    <img src="img.climage/images (1).jpg" alt="">
+                </div>
+            </div>
+            <div class="wave-divider">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+        
+    <main>
+        <section class="data-viz-container">
+            <div class="contain">
+                <div class="data-intro">
+                    <h2>Understanding Climate Data</h2>
+                    <p>Climate data helps us understand how our planet is changing over time. These visualizations show key climate indicators based on scientific measurements from trusted sources like NASA, NOAA, and the IPCC. Explore the data to see the evidence of climate change and its impacts.</p>
+                </div>
+
+                <div class="data-tabs">
+                    <div class="data-tab active" data-tab="temperature">Global Temperature</div>
+                    <div class="data-tab" data-tab="co2">CO₂ Levels</div>
+                    <div class="data-tab" data-tab="sea-level">Sea Level Rise</div>
+                    <div class="data-tab" data-tab="arctic-ice">Arctic Sea Ice</div>
+                </div>
+
+                <div class="interactive-controls">
+                    <div class="control-group">
+                        <label for="time-range" class="control-label">Time Range:</label>
+                        <select id="time-range" class="control-select">
+                            <option value="50">Last 50 years</option>
+                            <option value="100">Last 100 years</option>
+                            <option value="150" selected>Last 150 years</option>
+                            <option value="all">All available data</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label for="data-display" class="control-label">Display:</label>
+                        <select id="data-display" class="control-select">
+                            <option value="line" selected>Line Chart</option>
+                            <option value="bar">Bar Chart</option>
+                            <option value="area">Area Chart</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="chart-wrapper" id="temperature-chart">
+                    <h3 class="chart-title">Global Temperature Anomaly (1880-2023)</h3>
+                    <div class="chart-container">
+                        <canvas id="temperature-canvas" class="chart-canvas"></canvas>
+                    </div>
+                    <div class="chart-legend">
+                        <div class="legend-item">
+                            <div class="legend-color temperature"></div>
+                            <span>Temperature anomaly relative to 1951-1980 average (°C)</span>
+                        </div>
+                    </div>
+                    <div class="download-options">
+                        <a href="#" class="download-btn">Download Data (CSV)</a>
+                    </div>
+                    <div class="data-insights">
+                        <h3>Key Insights:</h3>
+                        <ul class="insights-list">
+                            <li>Global temperatures have risen by approximately 1.1°C since pre-industrial times.</li>
+                            <li>The rate of warming has accelerated in recent decades.</li>
+                            <li>The last decade (2011-2020) was the warmest on record.</li>
+                            <li>19 of the 20 warmest years have occurred since 2000.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="chart-wrapper" id="co2-chart" style="display: none;">
+                    <h3 class="chart-title">Atmospheric CO₂ Concentration (1960-2023)</h3>
+                    <div class="chart-container">
+                        <canvas id="co2-canvas" class="chart-canvas"></canvas>
+                    </div>
+                    <div class="chart-legend">
+                        <div class="legend-item">
+                            <div class="legend-color co2"></div>
+                            <span>CO₂ concentration in parts per million (ppm)</span>
+                        </div>
+                    </div>
+                    <div class="download-options">
+                        <a href="#" class="download-btn">Download Data (CSV)</a>
+                    </div>
+                    <div class="data-insights">
+                        <h3>Key Insights:</h3>
+                        <ul class="insights-list">
+                            <li>CO₂ levels have increased from about 280 ppm in pre-industrial times to over 420 ppm today.</li>
+                            <li>Current CO₂ levels are higher than at any point in at least the past 800,000 years.</li>
+                            <li>The rate of increase has accelerated, now rising by about 2-3 ppm per year.</li>
+                            <li>Human activities, primarily burning fossil fuels, are the main cause of this increase.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chart-wrapper" id="sea-level-chart" style="display: none;">
+                    <h3 class="chart-title">Global Sea Level Rise (1900-2023)</h3>
+                    <div class="chart-container">
+                        <canvas id="sea-level-canvas" class="chart-canvas"></canvas>
+                    </div>
+                    <div class="chart-legend">
+                        <div class="legend-item">
+                            <div class="legend-color sea-level"></div>
+                            <span>Sea level change in centimeters (cm) relative to 1900</span>
+                        </div>
+                    </div>
+                    <div class="download-options">
+                        <a href="#" class="download-btn">Download Data (CSV)</a>
+                    </div>
+                    <div class="data-insights">
+                        <h3>Key Insights:</h3>
+                        <ul class="insights-list">
+                            <li>Global sea levels have risen about 21-24 cm (8-9 inches) since 1880.</li>
+                            <li>The rate of sea level rise has accelerated and is now about 3.7 mm per year.</li>
+                            <li>Major contributors are thermal expansion of seawater and melting ice from glaciers and ice sheets.</li>
+                            <li>Projections suggest sea levels could rise by 30-100 cm (1-3.3 feet) by 2100, depending on emissions scenarios.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="chart-wrapper" id="arctic-ice-chart" style="display: none;">
+                    <h3 class="chart-title">Arctic Sea Ice Extent (1980-2023)</h3>
+                    <div class="chart-container">
+                        <canvas id="arctic-ice-canvas" class="chart-canvas"></canvas>
+                    </div>
+                    <div class="chart-legend">
+                        <div class="legend-item">
+                            <div class="legend-color arctic-ice"></div>
+                            <span>September sea ice extent in million square kilometers</span>
+                        </div>
+                    </div>
+                    <div class="download-options">
+                        <a href="#" class="download-btn">Download Data (CSV)</a>
+                    </div>
+                    <div class="data-insights">
+                        <h3>Key Insights:</h3>
+                        <ul class="insights-list">
+                            <li>Arctic sea ice has been declining at a rate of about 13% per decade since satellite measurements began in 1979.</li>
+                            <li>The 14 lowest September sea ice extents have all occurred in the last 14 years.</li>
+                            <li>The Arctic is warming about twice as fast as the global average.</li>
+                            <li>Scientists project the Arctic Ocean could be nearly ice-free in summer by mid-century.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="data-sources">
+                    <h3>Data Sources</h3>
+                    <ul class="sources-list">
+                        <li>Temperature data: <a href="https://data.giss.nasa.gov/gistemp/" target="_blank">NASA Goddard Institute for Space Studies (GISS)</a></li>
+                        <li>CO₂ data: <a href="https://gml.noaa.gov/ccgg/trends/" target="_blank">NOAA Global Monitoring Laboratory - Mauna Loa Observatory</a></li>
+                        <li>Sea level data: <a href="https://sealevel.nasa.gov/" target="_blank">NASA Sea Level Change Portal</a></li>
+                        <li>Arctic sea ice data: <a href="https://nsidc.org/arcticseaicenews/" target="_blank">National Snow and Ice Data Center (NSIDC)</a></li>
+                    </ul>
+                </div>
+
+                <div class="data-methodology">
+                    <h3>Methodology</h3>
+                    <p>These visualizations present scientific data collected through various methods including satellite measurements, weather stations, ocean buoys, ice cores, and other paleoclimate records. The data has been processed and validated by scientific institutions to ensure accuracy. Temperature anomalies are shown as differences from a baseline period (1951-1980) to highlight changes over time.</p>
+                    <p>For educational purposes, some data points may be simplified or interpolated to create clearer visualizations while maintaining scientific integrity. For detailed methodologies and raw data, please visit the original data sources linked above.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="data-education">
+            <div class="contain">
+                <h2>Understanding Climate Data in the Classroom</h2>
+                <p>Climate data provides an excellent opportunity for students to practice data analysis, graphing, and critical thinking skills while learning about an important global issue.</p>
+                
+                <div class="education-resources">
+                    <div class="education-card">
+                        <h3>Classroom Activities</h3>
+                        <p>Download ready-to-use activities that help students analyze and interpret climate data.</p>
+                        <a href="resources.html#activities" class="btn">View Activities</a>
+                    </div>
+                    
+                    <div class="education-card">
+                        <h3>Data Literacy Guide</h3>
+                        <p>A guide for teachers on building data literacy skills through climate science.</p>
+                        <a href="#" class="btn">Download Guide</a>
+                    </div>
+                    
+                    <div class="education-card">
+                        <h3>Student Research Projects</h3>
+                        <p>Ideas and guidelines for student research projects using climate data.</p>
+                        <a href="#" class="btn">View Projects</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="next-steps">
+            <h2>What's Next?</h2>
+            <p>Now that you've explored the data, learn about solutions to climate change and how you can take action.</p>
+            <div class="next-buttons">
+                <a href="solutions.html" class="btn">Explore Solutions</a>
+                <a href="action.html" class="btn btn-secondary">Take Action</a>
+            </div>
+        </section>
+    </main>
+
+     <footer>
+        <div class="contain">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Eco <img src="/environmental-awareness.png" alt=""><span>Aware</span></h2>
+                    <p>Empowering youth to take climate action</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Learn</h3>
+                        <ul>
+                            <li><a href="cause.html">Causes</a></li>
+                            <li><a href="effect.html">Effects</a></li>
+                            <li><a href="solution.html">Solutions</a></li>
+                            <li><a href="quiz.html">Quiz</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="resource.html">Downloads</a></li>
+                            <li><a href="resource.html">Videos</a></li>
+                            <li><a href="resource.html">External Links</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Take Action</h3>
+                        <ul>
+                            <li><a href="take-action">Make a Pledge</a></li>
+                            <li><a href="take-action">Newsletter</a></li>
+                            <li><a href="take-action">Events</a></li>
+                            <li><a href="take-action">Share</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Connect</h3>
+                        <ul class="social-links">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                            <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+<div class="footer-bottom">
+                <p>&copy; 2025 EcoAware.</p>
+            </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.data-tab');
+            const charts = document.querySelectorAll('.chart-wrapper');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    charts.forEach(chart => chart.style.display = 'none');
+                    const chartId = this.getAttribute('data-tab') + '-chart';
+                    document.getElementById(chartId).style.display = 'block';
+                });
+            });
+        });
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    function performSearch() {
+        const query = document.getElementById('searchInput').value.toLowerCase();
+        if (!query) return;
+
+        const pages = [
+            { keyword: 'cause', url: 'cause.html' },
+            { keyword: 'effect', url: 'effect.html' },
+            { keyword: 'solution', url: 'solution.html' },
+            { keyword: 'quiz', url: 'quiz.html' },
+            { keyword: 'resource', url: 'resource.html' },
+            { keyword: 'data', url: 'data.html' },
+            { keyword: 'action', url: 'take-action.html' }
+        ];
+
+        const match = pages.find(page => query.includes(page.keyword));
+        if (match) {
+            window.location.href = match.url;
+        } else {
+            alert('No matching climate content found. Try keywords like "cause", "solution", "data".');
+        }
+      }
+      document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.getElementById('nav-toggle');
+            const nav = document.querySelector('nav');
+            const navLinks = document.querySelectorAll('nav a');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navToggle.checked = false;
+                });
+            });
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+             });
+  document.addEventListener("DOMContentLoaded", function () {
+
+    const chartConfigs = {
+      temperature: {
+        id: 'temperature-canvas',
+        label: 'Global Temperature',
+        color: '#970000',
+        data: [0.1, 0.2, 0.4, 0.8, 1.0, 1.2],
+        labels: ['1880', '1920', '1960', '2000', '2010', '2023']
+      },
+      co2: {
+        id: 'co2-canvas',
+        label: 'CO₂ ppm',
+        color: '#000ba1',
+        data: [315, 330, 360, 390, 410, 420],
+        labels: ['1960', '1975', '1990', '2005', '2015', '2023']
+      },
+      'sea-level': {
+        id: 'sea-level-canvas',
+        label: 'Sea Level (cm)',
+        color: '#1e9700',
+        data: [0, 3, 7, 10, 15, 24],
+        labels: ['1900', '1930', '1960', '1990', '2010', '2023']
+      },
+      'arctic-ice': {
+        id: 'arctic-ice-canvas',
+        label: 'Sea Ice Extent',
+        color: '#8000b3',
+        data: [7.5, 7.2, 6.8, 5.0, 4.3, 3.5],
+        labels: ['1980', '1990', '2000', '2010', '2020', '2023']
+      }
+    };
+
+    const chartInstances = {};
+
+    function renderChart(tabKey, type) {
+      const config = chartConfigs[tabKey];
+      const ctx = document.getElementById(config.id).getContext('2d');
+
+      if (chartInstances[tabKey]) {
+        chartInstances[tabKey].destroy();
+      }
+
+      chartInstances[tabKey] = new Chart(ctx, {
+        type: type,
+        data: {
+          labels: config.labels,
+          datasets: [{
+            label: config.label,
+            data: config.data,
+            borderColor: config.color,
+            backgroundColor: type === 'bar' || type === 'area' ? config.color + '66' : 'transparent',
+            fill: type === 'area'
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: false }
+          },
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    }
+
+    renderChart('temperature', 'line');
+    renderChart('co2', 'line');
+    renderChart('sea-level', 'line');
+    renderChart('arctic-ice', 'line');
+
+    document.getElementById('data-display').addEventListener('change', (e) => {
+      const chartType = e.target.value;
+      const currentTab = document.querySelector('.data-tab.active').dataset.tab;
+      renderChart(currentTab, chartType);
+    });
+
+    const downloadButtons = document.querySelectorAll('.download-btn');
+    downloadButtons.forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.preventDefault();
+        const chartId = btn.closest('.chart-wrapper').id.replace('-chart', '');
+        const config = chartConfigs[chartId];
+
+        let csvContent = 'data:text/csv;charset=utf-8,' + ['Year,' + config.label]
+          .concat(config.labels.map((l, i) => `${l},${config.data[i]}`)).join('\n');
+
+        const encodedUri = encodeURI(csvContent);
+        const link = document.createElement('a');
+        link.setAttribute('href', encodedUri);
+        link.setAttribute('download', chartId + '_data.csv');
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      });
+    });
+  });
+    document.querySelectorAll('.education-card a').forEach((link, index) => {
+      const urls = [
+        'https://climate.nasa.gov/resources/education/',
+        'https://www.climate.gov/teaching/resources',
+        'https://scied.ucar.edu/student-research']
+      if (urls[index]) link.href = urls[index];
+      link.target = '_blank';
+    });
+      const socialLinks = document.querySelectorAll('.social-links a');
+    const socialURLs = [
+      'https://www.facebook.com/climategroup/',
+      'https://twitter.com/UNFCCC',
+      'https://www.instagram.com/unclimatechange/',
+      'https://www.youtube.com/user/climatechange']
+    socialLinks.forEach((link, i) => {
+      if (socialURLs[i]) {
+        link.href = socialURLs[i];
+        link.target = '_blank';
+      }
+    });
+</script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>

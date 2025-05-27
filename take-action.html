@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Take Action</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="take-action.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="top-nav">
+         <div class="btec-logo">
+     DI BTEC Project
+        </div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search climate topics...">
+            <button onclick="performSearch()">Search</button>
+        </div>
+    </div>
+    <header>
+        <div class="logo">
+         <a href="index.html">  Eco  <img src="/environmental-awareness.png" alt=""><span>Aware</span></a>
+        </div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+        <nav>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="cause.html">Causes</a></li>
+                <li><a href="effect.html">Effects</a></li>
+                <li><a href="solution.html">Solutions</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="resource.html">Resources</a></li>
+                <li><a href="take-action.html" class="take-action">Take Action</a></li>
+            </ul>
+        </nav>
+    </header>
+ <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Take Action Now</h1>
+                    <p>Join the movement, connect with us, and make a difference in the fight against climate change</p>
+                    <div class="hero-buttons">
+                        <a href="causes" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="img.climage/download__1_-removebg-preview.png" alt="">
+                </div>
+            </div>
+            <div class="wave-divider">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+        
+    <main>
+
+        <section class="action-intro">
+            <div class="contain">
+                <h2>Your Voice Matters</h2>
+                <p>Climate change is a global challenge that requires action at all levels. Whether you're a student, teacher, parent, or community member, there are many ways you can contribute to climate solutions. Connect with us to learn more, share your ideas, or get involved in local initiatives.</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-form-container">
+                        <h2>Get in Touch</h2>
+                        <p>Have questions, ideas, or want to collaborate? Send us a message!</p>
+                        
+                        <form class="contact-form" id="contactForm" onsubmit="event.preventDefault(); sendMessage();">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text"  id="contactName" name="name" placeholder="Enter your name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="contactEmail" name="email" placeholder="Enter your email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="contactSubject" name="subject" required>
+                                    <option value="" disabled selected>Select a subject</option>
+                                    <option value="question">General Question</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="collaboration">Collaboration Opportunity</option>
+                                    <option value="volunteer">Volunteer Interest</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea  id="contactMessage"  name="message" placeholder="Type your message here..." rows="5" required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="newsletter" id="contactSubscribe">
+                                    <span class="checkmark"></span>
+                                    Subscribe to our newsletter for climate updates and action opportunities
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn">Send Message</button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <div class="info-card">
+                            <div class="info-icon">📧</div>
+                            <h3>Email Us</h3>
+                            <p>For general inquiries: <a href="mailto:ecoware@email.com">ecoware@gmail.com</a></p>
+                            <p>For educational resources: <a href="mailto:education@climatechampions.org">education@climatechampions.org</a></p>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="info-icon">📱</div>
+                            <h3>Follow Us</h3>
+                            <div class="social-links">
+                                <a href="#" class="social-link">Instagram</a>
+                                <a href="#" class="social-link">Twitter</a>
+                                <a href="#" class="social-link">Facebook</a>
+                                <a href="#" class="social-link">YouTube</a>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="info-icon">📅</div>
+                            <h3>Response Time</h3>
+                            <p>We aim to respond to all inquiries within 2 business days. Thank you for your patience!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+  <div class="contain">
+    <h1>Take the Climate Eco Aware Pledge</h1>
+    <p>Commit to taking action on climate change in your daily life</p>
+
+    <div class="pledge-container">
+      <div class="pledges">
+        <label><input type="checkbox" class="pledge" />
+          I will reduce my carbon footprint by walking, cycling, or using public transport more often.
+        </label>
+        <label><input type="checkbox" class="pledge" />
+          I will reduce food waste and eat more plant-based meals.
+        </label>
+        <label><input type="checkbox" class="pledge" />
+          I will conserve energy by turning off lights and electronics when not in use.
+        </label>
+        <label><input type="checkbox" class="pledge" />
+          I will reduce, reuse, and recycle to minimize waste.
+        </label>
+        <label><input type="checkbox" class="pledge" />
+          I will share what I've learned about climate change with friends and family.
+        </label>
+      </div>
+
+      <div class="certificate">
+        <h2>Climate EcoAware Certificate</h2>
+        <p>
+          I, <input type="text" id="nameInput" placeholder="Your Name" />, pledge to take action on climate change and inspire others to do the same.
+        </p>
+        <p><em>Date: <span id="date"></span></em></p>
+        <button onclick="sendPledge()">Send</button>
+      </div>
+    </div>
+
+    <div class="feedback-section">
+      <h2>Share Your Feedback</h2>
+      <textarea id="feedbackInput" placeholder="Enter your feedback here..."></textarea><br />
+      <button onclick="submitFeedback()">Send Feedback</button>
+
+      <div id="feedbackDisplay" class="feedback-display">
+        <h3>Your Feedback</h3>
+        <p id="feedbackText">No feedback submitted yet.</p>
+      </div>
+    </div>
+  </div>
+
+ 
+
+
+        <section class="action-ways">
+            <div class="coin">
+                <h2>Ways to Take Action</h2>
+                <p>There are many ways you can make a difference in your school, community, and beyond</p>
+                
+                <div class="action-cards">
+                    <div class="action-card">
+                        <div class="action-icon">🏫</div>
+                        <h3>At School</h3>
+                        <ul class="action-list">
+                            <li>Start or join an eco-club</li>
+                            <li>Organize a climate awareness day</li>
+                            <li>Propose sustainable practices to school administration</li>
+                            <li>Create climate-themed art or writing projects</li>
+                            <li>Start a school garden or composting program</li>
+                        </ul>
+                        <a href="https://www.nrdc.org/stories/what-you-can-do-school" class="action-link">School Action Guide</a>
+                    </div>
+                    
+                    <div class="action-card">
+                        <div class="action-icon">🏠</div>
+                        <h3>At Home</h3>
+                        <ul class="action-list">
+                            <li>Reduce energy consumption</li>
+                            <li>Minimize food waste</li>
+                            <li>Start a garden or grow herbs</li>
+                            <li>Choose sustainable transportation options</li>
+                            <li>Talk to family members about climate change</li>
+                        </ul>
+                        <a href="https://www.epa.gov/greenliving" class="action-link">Home Action Guide</a>
+                    </div>
+                    
+                    <div class="action-card">
+                        <div class="action-icon">🌆</div>
+                        <h3>In Your Community</h3>
+                        <ul class="action-list">
+                            <li>Volunteer for local environmental organizations</li>
+                            <li>Participate in community clean-ups</li>
+                            <li>Attend town halls and advocate for climate policies</li>
+                            <li>Support local farmers and sustainable businesses</li>
+                            <li>Organize community workshops on climate solutions</li>
+                        </ul>
+                        <a href="https://earth.org/how-to-help-your-community-become-more-sustainable/" class="action-link">Community Action Guide</a>
+                    </div>
+                    
+                    <div class="action-card">
+                        <div class="action-icon">🌐</div>
+                        <h3>Online</h3>
+                        <ul class="action-list">
+                            <li>Share accurate climate information on social media</li>
+                            <li>Sign and share petitions for climate action</li>
+                            <li>Follow and amplify youth climate activists</li>
+                            <li>Participate in virtual climate events</li>
+                            <li>Use digital tools to calculate and reduce your carbon footprint</li>
+                        </ul>
+                        <a href="https://www.un.org/actnow" class="action-link">Digital Action Guide</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="join-movement">
+            <div class="coin">
+                <h2>Join Our Climate Champions Network</h2>
+                <p>Connect with other students, teachers, and climate advocates in your area and around the world</p>
+                
+                <div class="join-options">
+                    <div class="join-option">
+                        <h3>Student Ambassadors</h3>
+                        <p>Become a Climate Champions Student Ambassador at your school. Lead projects, organize events, and inspire your peers to take action.</p>
+                        <a href="https://climatenetwork.org/join-us" class="btn">Apply Now</a>
+                    </div>
+                    
+                    <div class="join-option">
+                        <h3>Teacher Network</h3>
+                        <p>Join our network of educators committed to climate education. Access exclusive resources, professional development, and support.</p>
+                        <a href="https://www.350.org/volunteer/" class="btn">Join Network</a>
+                    </div>
+                    
+                    <div class="join-option">
+                        <h3>Community Partners</h3>
+                        <p>Partner with Climate Champions as a community organization, business, or local government to amplify climate action.</p>
+                        <a href="https://www.climateaction.org/contact/partnerships" class="btn">Become a Partner</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="upcoming-events">
+            <div class="coin">
+                <h2>Upcoming Events</h2>
+                <p>Join us for these upcoming climate action events and opportunities</p>
+                
+                <div class="events-list">
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="month">JUN</span>
+                            <span class="day">05</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>World Environment Day Webinar</h3>
+                            <p class="event-time">3:00 PM - 4:30 PM (Online)</p>
+                            <p class="event-description">Join our panel of youth climate activists for an inspiring discussion on local climate solutions.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="month">JUL</span>
+                            <span class="day">15</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>Summer Climate Action Camp</h3>
+                            <p class="event-time">9:00 AM - 3:00 PM (City Park)</p>
+                            <p class="event-description">A week-long day camp for students ages 13-18 to learn about climate science and solutions through hands-on activities.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="month">AUG</span>
+                            <span class="day">22</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>Teacher Workshop: Climate in the Classroom</h3>
+                            <p class="event-time">10:00 AM - 2:00 PM (Community Center)</p>
+                            <p class="event-description">Professional development workshop for teachers on integrating climate education across subjects.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="coin">
+                <h2>Voices of Climate Eco Aware</h2>
+                <div class="testimonials-slider">
+                    <input type="radio" name="testimonial-slider" id="testimonial1" checked>
+                    <input type="radio" name="testimonial-slider" id="testimonial2">
+                    <input type="radio" name="testimonial-slider" id="testimonial3">
+                    
+                    <div class="testimonials-container">
+                        <div class="testimonial-slide">
+                            <div class="testimonial-content">
+                                <p>Starting an eco-club at my school was one of the most rewarding experiences. With support from Climate Champions, we've implemented a school-wide recycling program and planted over 50 trees on campus.</p>
+                                <div class="testimonial-author">
+                                    <img src="img.climage/hu.jpg" alt="">
+                                    <div class="author-info">
+                                        <h4>miss Maya </h4>
+                                        <p>High School Student, Age 16</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-slide">
+                            <div class="testimonial-content">
+                                <p>"The resources provided by Climate Champions have transformed how I teach environmental science. My students are more engaged and empowered to make a difference in their community."</p>
+                                <div class="testimonial-author">
+                                    <img src="img.climage/download (3).jpg" alt="">
+                                    <div class="author-info">
+                                        <h4>Mrs. Rodges</h4>
+                                        <p>Science Teacher</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-slide">
+                            <div class="testimonial-content">
+                                <p>"Our partnership with Climate Champions has helped our city implement youth-led climate initiatives. The students' perspective and energy have been invaluable to our sustainability efforts."</p>
+                                <div class="testimonial-author">
+                                    <img src="img.climage/images (2).jpg" alt="">
+                                    <div class="author-info">
+                                        <h4>Mrs Chenei</h4>
+                                        <p>City Sustainability Coordinator</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slider-controls">
+                        <label for="testimonial1"></label>
+                        <label for="testimonial2"></label>
+                        <label for="testimonial3"></label>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+     <footer>
+        <div class="coin">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Eco <img src="/environmental-awareness.png" alt=""><span>Aware</span></h2>
+                    <p>Empowering youth to take climate action</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Learn</h3>
+                        <ul>
+                            <li><a href="cause.html">Causes</a></li>
+                            <li><a href="effect.html">Effects</a></li>
+                            <li><a href="solution.html">Solutions</a></li>
+                            <li><a href="quiz.html">Quiz</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="resource.html">Downloads</a></li>
+                            <li><a href="resource.html">Videos</a></li>
+                            <li><a href="resource.html">External Links</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Take Action</h3>
+                        <ul>
+                            <li><a href="take-action.html">Make a Pledge</a></li>
+                            <li><a href="take-action.html">Newsletter</a></li>
+                            <li><a href="take-action.html">Events</a></li>
+                            <li><a href="take-action.html">Share</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Connect</h3>
+                        <ul class="social-links">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                            <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+                <p>&copy; 2025 EcoAware.</p>
+            </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.getElementById('nav-toggle');
+            const nav = document.querySelector('nav');
+            const navLinks = document.querySelectorAll('nav a');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navToggle.checked = false;
+                });
+            });
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+             });
+        function performSearch() {
+        const query = document.getElementById('searchInput').value.toLowerCase();
+        if (!query) return;
+
+        const pages = [
+            { keyword: 'cause', url: 'cause.html' },
+            { keyword: 'effect', url: 'effect.html' },
+            { keyword: 'solution', url: 'solution.html' },
+            { keyword: 'quiz', url: 'quiz.html' },
+            { keyword: 'resource', url: 'resource.html' },
+            { keyword: 'data', url: 'data.html' },
+            { keyword: 'action', url: 'take-action.html' }
+        ];
+
+        const match = pages.find(page => query.includes(page.keyword));
+        if (match) {
+            window.location.href = match.url;
+        } else {
+            alert('No matching climate content found. Try keywords like "cause", "solution", "data".');
+        }
+      }
+        document.addEventListener('DOMContentLoaded', () => {
+  const dateElement = document.getElementById("date");
+  const today = new Date();
+  dateElement.textContent = today.toLocaleDateString(undefined, {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+});
+
+function sendPledge() {
+  const name = document.getElementById("nameInput").value.trim();
+  const checkedPledges = document.querySelectorAll(".pledge:checked");
+
+  if (!name) {
+    alert("Please enter your name to complete the pledge.");
+    return;
+  }
+
+  if (checkedPledges.length === 0) {
+    alert("Please select at least one pledge before submitting.");
+    return;
+  }
+
+  alert(`🎉 Thank you, ${name}, for taking the Climate Champion Pledge! 🌍`);
+}
+
+function submitFeedback() {
+  const feedback = document.getElementById("feedbackInput").value.trim();
+  const feedbackText = document.getElementById("feedbackText");
+
+  if (feedback) {
+    feedbackText.textContent = feedback;
+    document.getElementById("feedbackInput").value = "";
+  } else {
+    alert("Please enter your feedback before submitting.");
+  }
+}
+
+    </script>
+    <script>
+        function sendMessage() {
+  const name = document.getElementById("contactName").value.trim();
+  const email = document.getElementById("contactEmail").value.trim();
+  const subject = document.getElementById("contactSubject").value;
+  const message = document.getElementById("contactMessage").value.trim();
+  const subscribe = document.getElementById("contactSubscribe").checked;
+
+  if (!name || !email || !subject || !message) {
+    alert("Please fill out all fields before submitting.");
+    return;
+  }
+
+  if (!validateEmail(email)) {
+    alert("Please enter a valid email address.");
+    return;
+  }
+
+  let confirmMsg = `✅ Thank you, ${name}! Your message has been sent.\n\nSubject: ${subject}\nMessage: ${message}`;
+  if (subscribe) {
+    confirmMsg += "\n\n📬 You've been subscribed to our newsletter!";
+  }
+
+  alert(confirmMsg);
+
+  document.getElementById("contactForm").reset();
+}
+
+function validateEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+  const socialLinks = document.querySelectorAll('.social-links a');
+    const socialURLs = [
+      'https://www.facebook.com/climategroup/',
+      'https://twitter.com/UNFCCC',
+      'https://www.instagram.com/unclimatechange/',
+      'https://www.youtube.com/user/climatechange']
+    socialLinks.forEach((link, i) => {
+      if (socialURLs[i]) {
+        link.href = socialURLs[i];
+        link.target = '_blank';
+      }
+    });
+    </script>
+    <script>
+  AOS.init();
+</script>
+</body>
+</html>
